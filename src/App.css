@@ -26,14 +26,29 @@
     color: #6c757d;
   }
   
-  .btn-primary {
+  .btn {
     font-weight: bold;
-    background-color: #007bff;
+    background-color: lightgrey;
     border: none;
     transition: background-color 0.3s;
   }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
+ .card {
+  border-radius: 0;
+ } 
+ .card img{
+  width: 50px;
+  margin: 0 auto;
+  background-color: white;
+ }
+ .card p{
+  margin-top: 10px;
+ }
+.bg-lightpink {
+  background-color: #f8c8d7;
+}
+.bg-lightblue {
+  background-color: #add8e6;
+}
+.bg-lightgreen {
+  background-color: #90ee90; 
+}
