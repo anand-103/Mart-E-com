@@ -6,62 +6,63 @@ import '../App.css';
 const Home = () => {
   return (
     <>
-      <Carousel controls={false} indicators={false} interval={1000}>
-        <Carousel.Item>
-          <div className="carousel-content d-flex justify-content-center align-items-center">
-            <div className="text p-2" style={{ marginRight: '180px' }}> {/* Custom margin */}
-              <h1 className='py-3'>50% Off For Your First Shopping</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab ut at, maxime perferendis cum numquam temporibus labore mollitia hic!</p>
-              <button className='btn btn-light'>Visit Collection</button>
-            </div>
-            <div className="image-container d-flex justify-content-center align-items-center">
-              <img className="carousel-img" src="phone-08.png" alt="First slide" />
-            </div>
+    <Carousel controls={false} indicators={false} interval={1000}>
+      <Carousel.Item>
+        <div className="carousel-content mb-5 d-flex flex-column flex-md-row justify-content-space-around align-items-center p-3">
+          <div className="text-container p-2 text-md-start text-center">
+            <h1 className="carousel-title">50% Off For Your First Shopping</h1>
+            <p className="carousel-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab ut at, maxime perferendis cum numquam temporibus labore mollitia hic!</p>
+            <button className="btn btn-primary mt-2 carousel-button">Visit Collection</button>
           </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="carousel-content d-flex justify-content-center align-items-center">
-            <div className="text p-2" style={{ marginRight: '150px' }}>
-              <h1 className='py-3'>50% Off For Your First Shopping</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab ut at, maxime perferendis cum numquam temporibus labore mollitia hic!</p>
-              <button className='btn btn-primary'>Visit Collection</button>
-            </div>
-            <div className="image-container d-flex justify-content-center align-items-center">
-              <img className="carousel-img" src="wireless-01.png" alt="Second slide" />
-            </div>
+          <div className="image-container d-flex justify-content-center align-items-center">
+            <img className="carousel-img" src="phone-08.png" alt="First slide" />
           </div>
-        </Carousel.Item>
+        </div>
+      </Carousel.Item>
 
-        <Carousel.Item>
-          <div className="carousel-content d-flex justify-content-center align-items-center">
-            <div className="text p-2" style={{ marginRight: '250px' }}>
-              <h1 className='py-3'>50% Off For Your First Shopping</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab ut at, maxime perferendis cum numquam temporibus labore mollitia hic!</p>
-              <button className='btn btn-primary'>Visit Collection</button>
-            </div>
-            <div className="image-container d-flex justify-content-center align-items-center">
-              <img className="carousel-img" src="watch-07.png" alt="Third slide" />
-            </div>
+      <Carousel.Item>
+        <div className="carousel-content mb-5 d-flex flex-column flex-md-row justify-content-around align-items-center p-3">
+          <div className="text-container p-2 text-md-start text-center">
+            <h1 className="carousel-title">50% Off For Your First Shopping</h1>
+            <p className="carousel-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab ut at, maxime perferendis cum numquam temporibus labore mollitia hic!</p>
+            <button className="btn btn-primary mt-2 carousel-button">Visit Collection</button>
           </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="carousel-content d-flex justify-content-center align-items-center">
-            <div className="text p-2" style={{ marginRight: '80px' }}>
-              <h1 className='py-3'>50% Off For Your First Shopping</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab ut at, maxime perferendis cum numquam temporibus labore mollitia hic!</p>
-              <button className='btn btn-primary'>Visit Collection</button>
-            </div>
-            <div className="image-container d-flex justify-content-center align-items-center">
-              <img className="carousel-img" src="hero-img.png" alt="Fourth slide" />
-            </div>
+          <div className="image-container d-flex justify-content-center align-items-center">
+            <img className="carousel-img" src="wireless-01.png" alt="Second slide" />
           </div>
-        </Carousel.Item>
-      </Carousel>
+        </div>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <div className="carousel-content mb-5 d-flex flex-column flex-md-row justify-content-around align-items-center p-3">
+          <div className="text-container p-2 text-md-start text-center">
+            <h1 className="carousel-title">50% Off For Your First Shopping</h1>
+            <p className="carousel-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab ut at, maxime perferendis cum numquam temporibus labore mollitia hic!</p>
+            <button className="btn btn-primary mt-2 carousel-button">Visit Collection</button>
+          </div>
+          <div className="image-container d-flex justify-content-center align-items-center">
+            <img className="carousel-img" src="watch-07.png" alt="Third slide" />
+          </div>
+        </div>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <div className="carousel-content mb-5 d-flex flex-column flex-md-row justify-content-around align-items-center p-3">
+          <div className="text-container p-2 text-md-start text-center">
+            <h1 className="carousel-title">50% Off For Your First Shopping</h1>
+            <p className="carousel-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab ut at, maxime perferendis cum numquam temporibus labore mollitia hic!</p>
+            <button className="btn btn-primary mt-2 carousel-button">Visit Collection</button>
+          </div>
+          <div className="image-container d-flex justify-content-center align-items-center">
+            <img className="carousel-img" src="hero-img.png" alt="Fourth slide" />
+          </div>
+        </div>
+      </Carousel.Item>
+    </Carousel>
 
 
-      <div className="container">
+
+      <div className="container mt-5">
         <div className="row justify-content-center">
           <div className="col-12 col-md-6 col-lg-3 mb-4">
             <div className="card bg-lightpink text-center p-3">
