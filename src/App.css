@@ -1,0 +1,39 @@
+.carousel-content {
+    min-height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .text{
+    width: 600px;
+  }
+  .image-container {
+    max-width: 50%;
+  }
+  
+  .carousel-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  .text h1 {
+    font-weight: bold;
+  }
+  
+  .text p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .btn-primary {
+    font-weight: bold;
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  

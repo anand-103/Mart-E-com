@@ -1,0 +1,24 @@
+#user{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+#grocery{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+.cart{
+    position: relative;;
+}
+.cart-count{
+    position: absolute;
+    top: 0px;
+    right: .5px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: white;
+    background-color: black;
+    border: 0;
+}
