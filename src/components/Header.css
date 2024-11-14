@@ -1,24 +1,42 @@
-#user{
+.navbar {
+    background-color: #f8f9fa;
+}
+
+#user,
+#grocery {
     width: 45px;
     height: 45px;
     cursor: pointer;
 }
-#grocery{
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
+
+.cart {
+    position: relative;
+    display: inline-block;
 }
-.cart{
-    position: relative;;
-}
-.cart-count{
+
+.cart-count {
     position: absolute;
-    top: 0px;
-    right: .5px;
+    top: -2px;
+    right: -2px;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     color: white;
     background-color: black;
-    border: 0;
+    border: none;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+    .cart, #user {
+        margin-top: 10px;
+    }
 }

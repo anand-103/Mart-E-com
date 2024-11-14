@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
+import HomeProducts from './HomeProducts';
 
 const Home = () => {
   return (
@@ -62,7 +63,7 @@ const Home = () => {
 
 
 
-      <div className="container mt-5">
+      <div className="container my-5">
         <div className="row justify-content-center">
           <div className="col-12 col-md-6 col-lg-3 mb-4">
             <div className="card bg-lightpink text-center p-3">
@@ -98,6 +99,7 @@ const Home = () => {
         </div>
       </div>
 
+      <HomeProducts />
 
     </>
   );

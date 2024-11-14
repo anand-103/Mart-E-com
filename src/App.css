@@ -24,6 +24,27 @@
   height: 350px;
   object-fit: contain;
 }
+ .card {
+  border-radius: 0;
+ } 
+ .card img{
+  width: 50px;
+  margin: 0 auto;
+  background-color: white;
+ }
+ .card p{
+  margin-top: 10px;
+ }
+.bg-lightpink {
+  background-color: #f8c8d7;
+}
+.bg-lightblue {
+  background-color: #add8e6;
+}
+.bg-lightgreen {
+  background-color: #90ee90; 
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -45,24 +66,4 @@
     flex-direction: column;
     padding: 20px;
   }
-}
- .card {
-  border-radius: 0;
- } 
- .card img{
-  width: 50px;
-  margin: 0 auto;
-  background-color: white;
- }
- .card p{
-  margin-top: 10px;
- }
-.bg-lightpink {
-  background-color: #f8c8d7;
-}
-.bg-lightblue {
-  background-color: #add8e6;
-}
-.bg-lightgreen {
-  background-color: #90ee90; 
 }
