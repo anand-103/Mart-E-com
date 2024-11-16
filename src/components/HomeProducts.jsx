@@ -47,7 +47,7 @@ const DiscountProducts = () => {
     </div>
 
     <div className="container my-5">
-      <h2 className="my-4 text-center">New Arrivals</h2>
+      <h2 className="my-4 mb-5 text-center">New Arrivals</h2>
       <div className="row">
         {newItems.map((product) => (
           <div key={product.id} className="col-md-4 col-sm-6 col-12 mb-4">
@@ -74,8 +74,8 @@ const DiscountProducts = () => {
     </div>
 
 
-    <div className="container my-4">
-      <h2 className="my-4 text-center">Best Sales</h2>
+    <div className="container my-4 mb-5">
+      <h2 className="my-4 mb-5 text-center">Best Sales</h2>
       <div className="row">
         {sofaItems.map((product) => (
           <div key={product.id} className="col-md-4 col-sm-6 col-12 mb-4">
