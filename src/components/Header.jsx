@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-light shadow">
         <div className="container-fluid px-5">
-          <img src="achieversIT.png" alt="icon" className="navbar-brand" />
+          <img src="/achieversIT.png" alt="icon" className="navbar-brand" />
 
           <button
             className="navbar-toggler"
@@ -32,11 +32,11 @@ const Header = () => {
                 <a className="nav-link fw-bold" href="#cart">Cart</a>
               </li>
               <li className="nav-item px-3 d-flex align-items-center">
-                <img className='nav-link' src="user.png" alt="User" id="user" />
+                <img className='nav-link' src="/user.png" alt="User" id="user" />
               </li>
               <li className="nav-item px-3 d-flex align-items-center">
                 <div className="cart">
-                  <img className="nav-link" src="grocery-store.png" alt="grocery" id="grocery" />
+                  <img className="nav-link" src="/grocery-store.png" alt="grocery" id="grocery" />
                   <button className='cart-count'>0</button>
                 </div>
               </li>
