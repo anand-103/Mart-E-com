@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import { products } from './products';
 import './product.css';
@@ -48,8 +49,7 @@ const ProductDetails = () => {
           <div className="align-items-center mb-3">
             <input 
               type="number" 
-              min="1" 
-              defaultValue="1" 
+              defaultValue="0" 
               className="form-control w-25 mb-3"
             />
             <button onClick={cartAlert} className="btn btn-primary">Add to Cart</button>
@@ -115,6 +115,9 @@ const ProductDetails = () => {
                     <p className="card-text price">${product.price}</p>
                     <button className="btn rounded-circle" onClick={cartAlert}>+</button>
                   </div>
+                  <Link to={`/product/${product.id}`} className="btn btn-primary">
+                      View Details
+                    </Link>
                 </div>
               </div>
             </div>

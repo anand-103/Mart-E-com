@@ -23,10 +23,10 @@ const Header = () => {
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav align-items-center">
               <li className="nav-item px-3">
-                <a className="nav-link fw-bold" href="#home">Home</a>
+                <a className="nav-link fw-bold" href="/">Home</a>
               </li>
               <li className="nav-item px-3">
-                <a className="nav-link fw-bold" href="#about">Shop</a>
+                <a className="nav-link fw-bold" href="/product">Shop</a>
               </li>
               <li className="nav-item px-3">
                 <a className="nav-link fw-bold" href="#cart">Cart</a>

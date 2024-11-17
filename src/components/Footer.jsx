@@ -1,12 +1,13 @@
 import React from 'react'
+import './Footer.css'
 
 const Footer = () => {
   return (
     <>
-    <div className="container2 ">
+    <div className="container2 mt-5">
         <div className="first">
             <div className="title mb-3">
-                <img src="bag.png" alt="bag" className='bag' />
+                <img src="/bag.png" alt="bag" className='bag' />
                 <span>Mart</span>
             </div>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing eh5t. Provident quasi dicta 

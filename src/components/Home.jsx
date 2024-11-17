@@ -117,7 +117,7 @@ const Home = () => {
       <div className="row justify-content-center">
         {discountItems.map((product) => (
           <div key={product.id} className="col-md-4 col-sm-6 col-12 mb-4">
-            <div className="card h-100 d-flex flex-column">
+            <div className="card rounded h-100 d-flex flex-column">
               <div className="img-container border-3 w-100 h-100">
                 <img
                   src={product.imgUrl}
@@ -149,7 +149,7 @@ const Home = () => {
       <div className="row justify-content-center">
         {newItems.map((product) => (
           <div key={product.id} className="col-md-4 col-sm-6 col-12 mb-4">
-            <div className="card h-100 d-flex flex-column">
+            <div className="card rounded h-100 d-flex flex-column">
               <div className="img-container border-3 w-100 h-100">
                 <img
                   src={product.imgUrl}
@@ -181,7 +181,7 @@ const Home = () => {
       <div className="row justify-content-center">
         {sofaItems.map((product) => (
           <div key={product.id} className="col-md-4 col-sm-6 col-12 mb-4">
-            <div className="card h-100 d-flex flex-column">
+            <div className="card rounded h-100 d-flex flex-column">
               <div className="img-container border-3 w-100 h-100">
                 <img
                   src={product.imgUrl}
