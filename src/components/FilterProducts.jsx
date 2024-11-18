@@ -11,7 +11,7 @@ const ProductList = () => {
     const matchesCategory =
       categoryFilter === "" || product.category.toLowerCase() === categoryFilter.toLowerCase();
     const matchesSearchQuery =
-      product.productName.toLowerCase().includes(searchQuery.toLowerCase());
+      searchQuery.length < 2 || product.productName.toLowerCase().includes(searchQuery.toLowerCase());
 
     return matchesCategory && matchesSearchQuery;
   });
@@ -28,6 +28,20 @@ const ProductList = () => {
     console.log("Searching for: ", searchQuery);
   };
 
+  // Function to add product to cart (local storage)
+  const addToCart = (product) => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const isProductInCart = cart.some(item => item.id === product.id);
+
+    if (!isProductInCart) {
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${product.productName} added to the cart!`);
+    } else {
+      alert(`${product.productName} is already in the cart.`);
+    }
+  };
+  
   return (
     <>
       <div className="table mb-5">
@@ -50,7 +64,6 @@ const ProductList = () => {
             <option value="wireless">Wireless</option>
           </select>
 
-          {/* Search Bar */}
           <div className="input-group w-50">
             <input
               className="form rounded p-3 fs-5"
@@ -92,7 +105,7 @@ const ProductList = () => {
                         <p className="card-text price">${product.price}</p>
                         <button
                           className="btn rounded-circle"
-                          onClick={() => alert(`Added ${product.productName} to the cart!`)}
+                          onClick={() => addToCart(product)}
                         >
                           +
                         </button>

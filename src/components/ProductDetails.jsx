@@ -20,6 +20,20 @@ const ProductDetails = () => {
     alert(`Added ${product.productName} to the cart!`);
   };
 
+  // Function to add product to cart (local storage)
+  const addToCart = (product) => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const isProductInCart = cart.some(item => item.id === product.id);
+
+    if (!isProductInCart) {
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${product.productName} added to the cart!`);
+    } else {
+      alert(`${product.productName} is already in the cart.`);
+    }
+  };
+
   return (
     <>
     <div className="table">
@@ -52,7 +66,7 @@ const ProductDetails = () => {
               defaultValue="0" 
               className="form-control w-25 mb-3"
             />
-            <button onClick={cartAlert} className="btn btn-primary">Add to Cart</button>
+            <button onClick={() => addToCart(product)} className="btn btn-primary">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -113,7 +127,7 @@ const ProductDetails = () => {
                   <p className="star pt-2 pb-3">⭐⭐⭐⭐⭐</p>
                   <div className="price d-flex justify-content-between align-items-center">
                     <p className="card-text price">${product.price}</p>
-                    <button className="btn rounded-circle" onClick={cartAlert}>+</button>
+                    <button className="btn rounded-circle" onClick={() => addToCart(product)}>+</button>
                   </div>
                   <Link to={`/product/${product.id}`} className="btn btn-primary">
                       View Details

@@ -29,7 +29,7 @@ const Header = () => {
                 <a className="nav-link fw-bold" href="/product">Shop</a>
               </li>
               <li className="nav-item px-3">
-                <a className="nav-link fw-bold" href="#cart">Cart</a>
+                <a className="nav-link fw-bold" href="/cart">Cart</a>
               </li>
               <li className="nav-item px-3 d-flex align-items-center">
                 <img className='nav-link' src="/user.png" alt="User" id="user" />
