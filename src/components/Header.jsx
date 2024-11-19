@@ -36,8 +36,8 @@ const Header = () => {
               </li>
               <li className="nav-item px-3 d-flex align-items-center">
                 <div className="cart">
-                  <img className="nav-link" src="/grocery-store.png" alt="grocery" id="grocery" />
-                  <button className='cart-count'>0</button>
+                  <a href="/cart"><img className="nav-link" src="/grocery-store.png" alt="grocery" id="grocery" />
+                  <button className='cart-count'>0</button></a>
                 </div>
               </li>
             </ul>

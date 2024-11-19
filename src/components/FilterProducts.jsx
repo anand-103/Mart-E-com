@@ -90,6 +90,7 @@ const ProductList = () => {
               filteredProducts.map((product) => (
                 <div key={product.id} className="col-md-4 col-sm-6 col-12 mb-4">
                   <div className="card h-100 d-flex flex-column">
+                  <Link to={`/product/${product.id}`} className="btn h-50">
                     <div className="img-container border-3 w-100 h-100">
                       <img
                         src={product.imgUrl}
@@ -97,6 +98,7 @@ const ProductList = () => {
                         alt={product.productName}
                       />
                     </div>
+                    </Link>
                     <div className="heart">&#129293;</div>
                     <div className="card-body d-flex flex-column">
                       <h5 className="card-title">{product.productName}</h5>
@@ -110,9 +112,6 @@ const ProductList = () => {
                           +
                         </button>
                       </div>
-                      <Link to={`/product/${product.id}`} className="btn btn-primary">
-                      View Details
-                    </Link>
                     </div>
                   </div>
                 </div>

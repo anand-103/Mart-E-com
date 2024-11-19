@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import './cart.css'; // import the styles for cart items
+import './cart.css';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -15,7 +14,7 @@ const Cart = () => {
   const handleClear = (id) => {
     const updatedCart = cartItems.filter(item => item.id !== id);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-    setCartItems(updatedCart); // Update state to trigger re-render
+    setCartItems(updatedCart);
   };
 
   // Handle quantity change (increment/decrement)
@@ -30,75 +29,73 @@ const Cart = () => {
       return item;
     });
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-    setCartItems(updatedCart); // Update state to trigger re-render
+    setCartItems(updatedCart);
   };
+
+  // Calculate total amount
+  const totalAmount = cartItems.reduce((acc, item) => {
+    return acc + (item.price * (item.quantity || 1));
+  }, 0);
 
   return (
     <div className="container my-5">
       <h2 className="my-4 text-center">Your Cart</h2>
-        {cartItems.length > 0 ? (
-          cartItems.map((item) => (
-            <div key={item.id} className="card rounded d-flex mb-4">
-            <button className="clear" onClick={() => handleClear(item.id)}>X</button>
-            <div className="layout d-flex">
-            <div className="img-containerw-50 h-50 d-flex">
-              <img
-                src={item.imgUrl}
-                className="product-img w-50"
-                alt={item.productName}
-              />
-            </div>
-          
-            <div className="card-body d-flex">
-              <h5 className="card-title">{item.productName}</h5>
-          
-              <div className="price d-flex justify-content-between align-items-center">
-                <div className="priceQuantity d-flex">
-                  <p>${item.price} * {item.quantity || 1} item(s)</p>
-                  <p className="card-text price">${item.price * (item.quantity || 1)}</p>
-                </div>
-                <div className="incDec">
-                  <button
-                    className="increment"
-                    onClick={() => handleQuantityChange(item.id, 'increment')}
-                  >
-                    +
-                  </button>
-                  <button
-                    className="decrement"
-                    onClick={() => handleQuantityChange(item.id, 'decrement')}
-                  >
-                    -
-                  </button>
+      <div className="cart-container d-flex">
+        <div className="cart-details" style={{ width: "70%" }}>
+          {cartItems.length > 0 ? (
+            cartItems.map((item) => (
+              <div key={item.id} className="card rounded d-flex mb-4 position-relative">
+                <button className="clear rounded position-absolute" onClick={() => handleClear(item.id)}>X</button>
+                <div className="layout d-flex">
+                  <div className="img-container w-50 d-flex">
+                    <img
+                      src={item.imgUrl}
+                      className="product-img w-100"
+                      alt={item.productName}
+                    />
+                  </div>
+                  <div className="card-body d-flex flex-column">
+                    <h5 className="card-title">{item.productName}</h5>
+                    <div className="price d-flex justify-content-between align-items-center">
+                      <div className="priceQuantity d-flex justify-content-between align-items-center">
+                        <p className="fs-5 mx-3">${item.price} * {item.quantity || 1} item(s)</p>
+                        <p className="card-text price">${item.price * (item.quantity || 1)}</p>
+                      </div>
+                      <div className="incDec">
+                        <button
+                          className="increment rounded fs-4 mx-1"
+                          onClick={() => handleQuantityChange(item.id, 'increment')}
+                        >
+                          +
+                        </button>
+                        <button
+                          className="decrement rounded fs-4"
+                          onClick={() => handleQuantityChange(item.id, 'decrement')}
+                        >
+                          -
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+            ))
+          ) : (
+            <div className="card justify-content-center" style={{ height: "135px" }}>
+            <h3 className="text-center">Your cart is empty.</h3>
             </div>
-            </div>
-          </div>          
-          ))
-        ) : (
-          <p className="text-center">Your cart is empty.</p>
-        )}
-      <div className="text-center">
-        <Link to="/" className="btn btn-primary">Continue Shopping</Link>
+          )}
+        </div>
+
+        <div className="cart-total" style={{ width: "30%" }}>
+          <div className="total-card border rounded shadow p-3">
+            <h3>Total Amount:</h3>
+            <p className="fs-4">${totalAmount.toFixed(2)}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Cart;
-
-
-
-
-
-
-{/* <div className="card d-flex">
-    <div className="img">
-        <img src="user.png" alt="user" />
-    </div>
-    <div className="title-body">
-        <h3>asdfghj</h3>
-        <p>dfghjk</p>
-    </div>
-</div> */}

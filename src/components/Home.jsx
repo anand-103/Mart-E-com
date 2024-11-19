@@ -127,25 +127,24 @@ const Home = () => {
           {discountItems.map((product) => (
             <div key={product.id} className="col-md-4 col-sm-6 col-12 mb-4">
               <div className="card rounded h-100 d-flex flex-column">
+              <Link to={`/product/${product.id}`} className="btn h-50">
                 <div className="img-container border-3 w-100 h-100">
                   <img
                     src={product.imgUrl}
-                    className="product-img w-50 h-100 p-3"
+                    className="product-img w-100 h-100 p-3"
                     alt={product.productName}
                   />
                 </div>
+                </Link>
                 <p className="card-text1 px-3 discount">{product.discount}% Off</p>
                 <div className="heart">&#129293;</div>
-                <div className="card-body d-flex flex-column">
+                <div className="card-body justify-content-around">
                   <h5 className="card-title">{product.productName}</h5>
                   <p className="star pt-2 pb-3">⭐⭐⭐⭐⭐</p>
                   <div className="price d-flex justify-content-between align-items-center">
                     <p className="card-text price">${product.price}</p>
                     <button className="btn rounded-circle" onClick={() => addToCart(product)}>+</button>
                   </div>
-                  <Link to={`/product/${product.id}`} className="btn btn-primary">
-                    View Details
-                  </Link>
                 </div>
               </div>
             </div>
@@ -159,24 +158,23 @@ const Home = () => {
           {newItems.map((product) => (
             <div key={product.id} className="col-md-4 col-sm-6 col-12 mb-4">
               <div className="card rounded h-100 d-flex flex-column">
+              <Link to={`/product/${product.id}`} className="btn h-50">
                 <div className="img-container border-3 w-100 h-100">
                   <img
                     src={product.imgUrl}
-                    className="product-img w-50 h-100 p-3"
+                    className="product-img w-100 h-100 p-3"
                     alt={product.productName}
                   />
                 </div>
+                </Link>
                 <div className="heart">&#129293;</div>
-                <div className="card-body d-flex flex-column">
+                <div className="card-body d-flex justify-content-around">
                   <h5 className="card-title">{product.productName}</h5>
                   <p className="star pt-2 pb-3">⭐⭐⭐⭐⭐</p>
                   <div className="price d-flex justify-content-between align-items-center">
                     <p className="card-text price">${product.price}</p>
                     <button className="btn rounded-circle" onClick={() => addToCart(product)}>+</button>
                   </div>
-                  <Link to={`/product/${product.id}`} className="btn btn-primary">
-                    View Details
-                  </Link>
                 </div>
               </div>
             </div>
@@ -190,25 +188,24 @@ const Home = () => {
         <div className="row justify-content-center">
           {sofaItems.map((product) => (
             <div key={product.id} className="col-md-4 col-sm-6 col-12 mb-4">
-              <div className="card rounded h-100 d-flex flex-column">
+              <div className="card rounded d-flex flex-column">
+              <Link to={`/product/${product.id}`} className="btn h-50">
                 <div className="img-container border-3 w-100 h-100">
                   <img
                     src={product.imgUrl}
-                    className="product-img w-50 h-100 p-3"
+                    className="product-img w-100 h-100 p-3"
                     alt={product.productName}
                   />
                 </div>
+                </Link>
                 <div className="heart">&#129293;</div>
-                <div className="card-body d-flex flex-column">
+                <div className="card-body d-flex justify-content-around">
                   <h5 className="card-title">{product.productName}</h5>
-                  <p className="star pt-2 pb-3">⭐⭐⭐⭐⭐</p>
+                  <p className="star">⭐⭐⭐⭐⭐</p>
                   <div className="price d-flex justify-content-between align-items-center">
                     <p className="card-text price">${product.price}</p>
                     <button className="btn rounded-circle" onClick={() => addToCart(product)}>+</button>
                   </div>
-                  <Link to={`/product/${product.id}`} className="btn btn-primary">
-                    View Details
-                  </Link>
                 </div>
               </div>
             </div>
