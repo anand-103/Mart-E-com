@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import FilterProducts from "./components/FilterProducts";
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./components/Cart";
+import Login from "./components/Login";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/product" element={<FilterProducts />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
 
       </Routes>
     </Router>

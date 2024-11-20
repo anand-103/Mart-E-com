@@ -1,6 +1,8 @@
 .cart-container {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: space-between;
 }
 
 .card {
@@ -12,6 +14,7 @@
   display: flex;
   gap: 10px;
   height: 200px;
+  flex: 1;
 }
 
 .img-container {
@@ -40,15 +43,91 @@
   background-color: #f8f9fa;
   padding: 20px;
   border-radius: 10px;
+  flex-shrink: 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
 }
-.clear{
+
+.clear {
   top: 3px;
   right: 10px;
 }
-button{
+
+button {
   border: 0px solid gray;
   font-size: 20px;
 }
-.decrement{
+
+.decrement {
   width: 30px;
+}
+
+.cart-details {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .cart-container {
+    flex-direction: column; /* Stack items on smaller screens */
+    gap: 20px;
+  }
+
+  .cart-details,
+  .cart-total {
+    width: 100%; /* Take full width on smaller screens */
+  }
+
+  .card {
+    flex: 0 0 100%; /* Cards take full width */
+    height: auto; /* Allow flexible height */
+  }
+
+  .product-img {
+    height: 150px; /* Adjust image size */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    padding: 8px; /* Reduce padding on smaller screens */
+  }
+
+  .product-img {
+    height: 130px; /* Further adjust image size */
+  }
+
+  .incDec button {
+    font-size: 16px; /* Smaller button text */
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 5px; /* Reduce padding further for very small screens */
+  }
+
+  .product-img {
+    height: 120px; /* Further adjust image size */
+  }
+
+  .incDec button {
+    font-size: 14px; /* Further reduce button text */
+  }
+
+  .cart-total {
+    position: static; /* Allow total card to move with the page */
+    margin-top: 20px;
+  }
+}
+
+.cart-details > .card {
+  flex-basis: 100%; /* Ensure each product takes up full width if they wrap */
+}
+
+.cart-total {
+  position: relative; /* Keeps the total card in place on the right */
 }

@@ -41,7 +41,7 @@ const Cart = () => {
     <div className="container my-5">
       <h2 className="my-4 text-center">Your Cart</h2>
       <div className="cart-container d-flex">
-        <div className="cart-details" style={{ width: "70%" }}>
+        <div className="cart-details">
           {cartItems.length > 0 ? (
             cartItems.map((item) => (
               <div key={item.id} className="card rounded d-flex mb-4 position-relative">
@@ -82,12 +82,12 @@ const Cart = () => {
             ))
           ) : (
             <div className="card justify-content-center" style={{ height: "135px" }}>
-            <h3 className="text-center">Your cart is empty.</h3>
+              <h3 className="text-center">Your cart is empty.</h3>
             </div>
           )}
         </div>
 
-        <div className="cart-total" style={{ width: "30%" }}>
+        <div className="cart-total">
           <div className="total-card border rounded shadow p-3">
             <h3>Total Amount:</h3>
             <p className="fs-4">${totalAmount.toFixed(2)}</p>
