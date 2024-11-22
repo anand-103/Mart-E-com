@@ -139,7 +139,7 @@ const ProductList = () => {
                       <div className="price d-flex justify-content-between align-items-center">
                         <p className="card-text price">${product.price}</p>
                         <button
-                          className="btn rounded-circle"
+                          className="btn w-25 rounded-circle"
                           onClick={() => addToCart(product)}
                         >
                           +

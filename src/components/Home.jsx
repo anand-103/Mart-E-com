@@ -26,12 +26,12 @@ const Home = () => {
       localStorage.setItem("cart", JSON.stringify(cart));
       setAlertMessage(`${product.productName} added to the cart!`);
       setTimeout(() => {
-        setAlertMessage(""); // Clear the alert after 3 seconds
+        setAlertMessage("");
       }, 5000);
     } else {
       setAlertMessage(`${product.productName} is already in the cart.`);
       setTimeout(() => {
-        setAlertMessage(""); // Clear the alert after 3 seconds
+        setAlertMessage("");
       }, 5000);
     }
   };
@@ -54,7 +54,7 @@ const Home = () => {
               <div className="text-container p-2 text-md-start text-center">
                 <h1 className="carousel-title">{title}</h1>
                 <p className="carousel-description my-4">{desc}</p>
-                <button className="btn w-25 btn-primary mt-2 carousel-button">Visit Collection</button>
+                <button className="btn w-25 btn-light pl-0 mt-2 carousel-button">Visit Collection</button>
               </div>
               <div className="image-container d-flex justify-content-center align-items-center">
                 <img className="carousel-img" src={cover} alt={`Slide ${id}`} />
@@ -111,7 +111,7 @@ const Home = () => {
                   <p className="star pt-2 pb-3">⭐⭐⭐⭐⭐</p>
                   <div className="price d-flex justify-content-between align-items-center">
                     <p className="card-text price">${product.price}</p>
-                    <button className="btn rounded-circle" onClick={() => addToCart(product)}>+</button>
+                    <button className="btn w-25 rounded-circle" onClick={() => addToCart(product)}>+</button>
                   </div>
                 </div>
               </div>
@@ -141,7 +141,7 @@ const Home = () => {
                   <p className="star pt-2 pb-3">⭐⭐⭐⭐⭐</p>
                   <div className="price d-flex justify-content-between align-items-center">
                     <p className="card-text price">${product.price}</p>
-                    <button className="btn rounded-circle" onClick={() => addToCart(product)}>+</button>
+                    <button className="btn w-25 rounded-circle" onClick={() => addToCart(product)}>+</button>
                   </div>
                 </div>
               </div>
@@ -171,7 +171,7 @@ const Home = () => {
                   <p className="star">⭐⭐⭐⭐⭐</p>
                   <div className="price d-flex justify-content-between align-items-center">
                     <p className="card-text price">${product.price}</p>
-                    <button className="btn rounded-circle" onClick={() => addToCart(product)}>+</button>
+                    <button className="btn w-25 rounded-circle" onClick={() => addToCart(product)}>+</button>
                   </div>
                 </div>
               </div>

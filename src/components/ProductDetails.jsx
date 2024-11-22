@@ -147,7 +147,7 @@ const ProductDetails = () => {
                     <p className="star pt-2 pb-3">⭐⭐⭐⭐⭐</p>
                     <div className="price d-flex justify-content-between align-items-center">
                       <p className="card-text price">${product.price}</p>
-                      <button className="btn rounded-circle" onClick={() => addToCart(product)}>
+                      <button className="btn w-25 rounded-circle" onClick={() => addToCart(product)}>
                         +
                       </button>
                     </div>
